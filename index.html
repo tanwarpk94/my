@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pradeep Kumar — Senior .NET Developer</title>
-<meta name="description" content="Pradeep Kumar — Senior Software Engineer, 10 years in full-stack .NET development, specializing in NDC airline distribution, Amadeus, Sabre & American Airlines API integration, with familiarity in Python, React, and GenAI.">
+<title>Pradeep Kumar — Senior .NET Developer | Travel & Fintech</title>
+<meta name="description" content="Pradeep Kumar — Senior Software Engineer, 10 years in full-stack .NET development, specializing in NDC airline distribution (Amadeus, Sabre, American Airlines) and Fintech payment systems (AEPS, DMT, BBPS, Recharge), with familiarity in Python, React, and GenAI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -80,7 +80,7 @@
   }
   .section-sub{
     color:var(--ink-dim);
-    max-width:560px;
+    max-width:620px;
     font-size:.98rem;
     margin-bottom:40px;
   }
@@ -187,7 +187,7 @@
     color:var(--amber);margin-top:18px;letter-spacing:.01em;
   }
   .hero-desc{
-    margin-top:22px;max-width:560px;color:var(--ink-dim);font-size:1.05rem;
+    margin-top:22px;max-width:600px;color:var(--ink-dim);font-size:1.05rem;
   }
   .hero-cta{
     margin-top:38px;display:flex;gap:14px;flex-wrap:wrap;
@@ -232,26 +232,32 @@
   }
   .stat-num{font-family:var(--mono);font-weight:700;font-size:1.6rem;color:var(--teal);}
   .stat-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;
-    text-transform:uppercase;color:var(--ink-dim);text-align:right;max-width:160px;}
+    text-transform:uppercase;color:var(--ink-dim);text-align:right;max-width:175px;}
 
   /* ---------- EXPERTISE ---------- */
+  .domain-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;
+  }
+  @media (max-width:820px){ .domain-grid{grid-template-columns:1fr;} }
   .domain-panel{
     background:var(--surface);border:1px solid var(--line);
-    padding:32px;margin-bottom:32px;
+    padding:28px;
     position:relative;
   }
   .domain-panel::before{
-    content:'NDC · GDS · AIRLINE DISTRIBUTION';
-    position:absolute;top:-11px;left:24px;background:var(--bg);
-    padding:0 10px;font-family:var(--mono);font-size:.68rem;
+    content:attr(data-badge);
+    position:absolute;top:-11px;left:20px;background:var(--bg);
+    padding:0 10px;font-family:var(--mono);font-size:.66rem;
     letter-spacing:.1em;color:var(--amber);
   }
-  .domain-panel h3{
-    font-family:var(--mono);font-size:1.15rem;color:var(--ink);
-    margin-bottom:18px;font-weight:700;
+  .domain-panel.fintech-panel::before{
+    color:var(--teal);
   }
-  .domain-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:640px){ .domain-list{grid-template-columns:1fr;} }
+  .domain-panel h3{
+    font-family:var(--mono);font-size:1.1rem;color:var(--ink);
+    margin-bottom:16px;font-weight:700;
+  }
+  .domain-list{display:flex;flex-direction:column;gap:12px;}
   .domain-list li{
     color:var(--ink-dim);font-size:.92rem;padding-left:20px;position:relative;
   }
@@ -297,24 +303,37 @@
   .t-bullets li::before{content:'—';position:absolute;left:0;color:var(--ink-faint);}
 
   /* ---------- PROJECTS ---------- */
+  .featured-stack{
+    display:flex;flex-direction:column;gap:28px;margin-bottom:44px;
+  }
   .featured{
     border:1px solid var(--amber);background:var(--surface);
-    padding:36px;margin-bottom:44px;position:relative;
+    padding:34px;position:relative;
+  }
+  .featured.fintech-featured{
+    border-color:var(--teal);
   }
   .featured::before{
-    content:'FEATURED';position:absolute;top:-11px;left:24px;background:var(--bg);
+    content:attr(data-badge);position:absolute;top:-11px;left:24px;background:var(--bg);
     padding:0 10px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;
     color:var(--amber);
   }
+  .featured.fintech-featured::before{
+    color:var(--teal);
+  }
   .featured-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:8px;}
-  .featured h3{font-family:var(--mono);font-size:1.4rem;color:var(--ink);font-weight:700;}
+  .featured h3{font-family:var(--mono);font-size:1.35rem;color:var(--ink);font-weight:700;}
   .team-tag{font-family:var(--mono);font-size:.74rem;color:var(--ink-faint);}
-  .featured p.desc{color:var(--ink-dim);font-size:.97rem;margin:14px 0 20px;max-width:680px;}
+  .featured p.desc{color:var(--ink-dim);font-size:.97rem;margin:14px 0 20px;max-width:720px;}
   .stub-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
   .stub{
     font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;
     color:var(--teal);border:1px dashed var(--teal);padding:6px 12px;
     background:var(--teal-soft);
+  }
+  .stub.amber{
+    color:var(--amber);border-color:var(--amber);
+    background:var(--amber-soft);
   }
   .featured .t-bullets{column-count:2;column-gap:32px;}
   @media (max-width:700px){ .featured .t-bullets{column-count:1;} }
@@ -355,7 +374,7 @@
     padding:96px 0 56px;
   }
   .contact-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
-  .contact h2{font-family:var(--mono);font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);max-width:520px;}
+  .contact h2{font-family:var(--mono);font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);max-width:540px;}
   .contact-links{display:flex;flex-direction:column;gap:14px;}
   .contact-link{
     font-family:var(--mono);font-size:1.05rem;color:var(--ink);
@@ -408,7 +427,7 @@
       <span class="status-pill"><span class="ping"></span>STATUS: DEPLOYED</span>
       <span class="field">CURRENT&nbsp;<b>Wizie.com, Gurugram</b></span>
       <span class="field">EXPERIENCE&nbsp;<b>10 Years</b></span>
-      <span class="field">BASE&nbsp;<b>Jaipur, India</b></span>
+      <span class="field">FOCUS&nbsp;<b>Travel Tech &amp; Fintech</b></span>
     </div>
 
     <div class="flap-row" aria-label="Pradeep Kumar">
@@ -427,11 +446,11 @@
       <span class="flap-letter" style="animation-delay:.62s">R</span>
     </div>
 
-    <div class="role-line">Senior Software Engineer — Full-Stack .NET Development</div>
-    <p class="hero-desc">Ten years shipping enterprise web applications and PWAs. Currently building IATA NDC–compliant airline distribution systems, integrating Amadeus, Sabre, and American Airlines in real time — with working familiarity in Python, React, and GenAI.</p>
+    <div class="role-line">Senior Software Engineer — Full-Stack .NET · Travel &amp; Fintech</div>
+    <p class="hero-desc">Ten years building mission-critical web applications and PWAs. Specialized in IATA NDC airline distribution (Amadeus, Sabre, American Airlines) and high-volume Fintech payment platforms — Recharge, Domestic Money Transfer (DMT), AEPS, and BBPS — with working familiarity in Python, React, and GenAI.</p>
 
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#projects">View the NDC project</a>
+      <a class="btn btn-primary" href="#projects">Explore Travel &amp; Fintech work</a>
       <a class="btn btn-ghost" href="mailto:tanwar.pk94@gmail.com">tanwar.pk94@gmail.com</a>
     </div>
   </div>
@@ -445,15 +464,15 @@
     <h2 class="section-title">Built for systems that can't go down.</h2>
     <div class="about-grid reveal">
       <div class="about-text">
-        <p>Pradeep is a senior full-stack .NET engineer with <b>10 years</b> shipping enterprise web applications, progressive web apps, and third-party API integrations across travel, fintech, real estate, and education.</p>
-        <p>His current focus is <b>airline distribution</b> — building NDC-compliant systems that talk to Amadeus, Sabre, and American Airlines in real time, handling everything from fare search to PNR management.</p>
-        <p>Alongside his core .NET stack, he brings working familiarity with <b>Python, React, and GenAI</b>, and is comfortable owning a feature end-to-end — from API contract to production — while leading small teams.</p>
+        <p>Pradeep is a senior full-stack .NET engineer with <b>10 years</b> shipping enterprise web applications, progressive web apps, and high-throughput third-party API integrations across <b>fintech, payments, and airline distribution</b>.</p>
+        <p>In <b>fintech</b>, he has architected and scaled multi-tier B2B/B2C platforms handling real-time <b>mobile/DTH recharge, Domestic Money Transfer (DMT), AEPS, BBPS bill payments, eKYC, and wallet ledger settlements</b>.</p>
+        <p>His current focus in <b>airline distribution</b> centers on NDC-compliant systems connecting Amadeus, Sabre, and American Airlines in real time. Alongside his core .NET stack, he brings working familiarity with <b>Python, React, and GenAI</b>, owning features end-to-end from API contract to production.</p>
       </div>
       <div class="stat-stack">
         <div class="stat-row"><span class="stat-num">10</span><span class="stat-label">Years in production systems</span></div>
+        <div class="stat-row"><span class="stat-num">2</span><span class="stat-label">Core domains: Travel &amp; Fintech</span></div>
         <div class="stat-row"><span class="stat-num">9</span><span class="stat-label">Major systems shipped end-to-end</span></div>
-        <div class="stat-row"><span class="stat-num">50+</span><span class="stat-label">Client websites designed &amp; built</span></div>
-        <div class="stat-row"><span class="stat-num">3</span><span class="stat-label">GDS / airline APIs integrated</span></div>
+        <div class="stat-row"><span class="stat-num">50+</span><span class="stat-label">Client portals &amp; websites built</span></div>
       </div>
     </div>
   </div>
@@ -465,16 +484,28 @@
   <div class="wrap">
     <div class="eyebrow">Capabilities</div>
     <h2 class="section-title">Stack &amp; specialization</h2>
-    <p class="section-sub">General-purpose full-stack skills, plus a niche most .NET developers don't have: working airline distribution APIs.</p>
+    <p class="section-sub">Deep domain command across two mission-critical verticals — real-time Fintech payment rails and IATA NDC airline distribution.</p>
 
-    <div class="domain-panel reveal">
-      <h3>Travel domain — what sets this apart</h3>
-      <ul class="domain-list">
-        <li>NDC (New Distribution Capability) airline systems, built to IATA standards</li>
-        <li>Amadeus, Sabre &amp; American Airlines (AA) API integration</li>
-        <li>Flight search, pricing, booking &amp; PNR management modules</li>
-        <li>Real-time availability, fare rules, and multi-airline result aggregation</li>
-      </ul>
+    <div class="domain-grid reveal">
+      <div class="domain-panel fintech-panel" data-badge="FINTECH · RECHARGE · MONEY TRANSFER">
+        <h3>Fintech &amp; Payment Rails</h3>
+        <ul class="domain-list">
+          <li>Domestic Money Transfer (DMT) via IMPS/NEFT, beneficiary verification &amp; instant UTR tracking</li>
+          <li>AEPS (Aadhaar Enabled Payment System), Micro ATM &amp; biometric cash-in/cash-out flows</li>
+          <li>Multi-operator Mobile &amp; DTH Recharge engines with API switching &amp; auto-refunds</li>
+          <li>BBPS utility bill payments, eKYC onboarding, multi-tier wallets &amp; commission ledgers</li>
+        </ul>
+      </div>
+
+      <div class="domain-panel" data-badge="NDC · GDS · AIRLINE DISTRIBUTION">
+        <h3>Travel &amp; Airline Distribution</h3>
+        <ul class="domain-list">
+          <li>NDC (New Distribution Capability) airline systems built to IATA XML standards</li>
+          <li>Amadeus, Sabre &amp; American Airlines (AA) real-time API integration</li>
+          <li>Flight search, dynamic pricing, booking &amp; PNR management modules</li>
+          <li>Real-time availability, fare rules &amp; multi-airline result aggregation</li>
+        </ul>
+      </div>
     </div>
 
     <div class="skill-grid reveal">
@@ -499,21 +530,23 @@
         </div>
       </div>
       <div class="skill-card">
-        <h4>Tools &amp; Platforms</h4>
+        <h4>Fintech &amp; Payment APIs</h4>
         <div class="tag-row">
-          <span class="tag">Visual Studio</span><span class="tag">VS Code</span><span class="tag">Windows</span><span class="tag">GenAI (familiar)</span>
+          <span class="tag">DMT (IMPS/NEFT)</span><span class="tag">AEPS</span><span class="tag">BBPS</span>
+          <span class="tag">Recharge APIs</span><span class="tag">eKYC</span><span class="tag">Payment Gateways</span>
         </div>
       </div>
       <div class="skill-card">
-        <h4>Design</h4>
-        <div class="tag-row">
-          <span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Canva</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h4>Domain APIs</h4>
+        <h4>Airline &amp; GDS APIs</h4>
         <div class="tag-row">
           <span class="tag">Amadeus</span><span class="tag">Sabre</span><span class="tag">American Airlines</span><span class="tag">NDC XML</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h4>Tools, AI &amp; Design</h4>
+        <div class="tag-row">
+          <span class="tag">Visual Studio</span><span class="tag">VS Code</span><span class="tag">GenAI (familiar)</span>
+          <span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Canva</span>
         </div>
       </div>
     </div>
@@ -526,7 +559,7 @@
   <div class="wrap">
     <div class="eyebrow">Career</div>
     <h2 class="section-title">Where I've shipped</h2>
-    <p class="section-sub">Three companies, one consistent thread: enterprise .NET systems that real users depend on.</p>
+    <p class="section-sub">Three companies, one consistent thread: high-reliability .NET systems powering financial transactions and travel bookings.</p>
 
     <div class="timeline reveal">
       <div class="t-item">
@@ -550,12 +583,12 @@
           <span class="t-company">Cyrus Technoedge Pvt. Ltd. — Jaipur</span>
           <span class="t-date">JAN 2021 — MAR 2025</span>
         </div>
-        <div class="t-role">Senior .NET Developer</div>
+        <div class="t-role">Senior .NET Developer — Fintech &amp; Enterprise Platforms</div>
         <ul class="t-bullets">
-          <li>Developed web applications using ASP.NET, C#.NET &amp; SQL Server</li>
-          <li>Maintained and optimized enterprise-level applications</li>
-          <li>Worked across Recharge, BBPS, Travel, NBFC, eKYC &amp; e-commerce domains</li>
-          <li>Integrated third-party APIs, keeping performance secure and scalable</li>
+          <li>Architected and maintained high-volume Fintech platforms for Mobile/DTH Recharge, Domestic Money Transfer (DMT), AEPS, and BBPS</li>
+          <li>Built real-time wallet ledger systems, multi-tier distributor/retailer commission engines, and automated settlement reconciliation</li>
+          <li>Integrated banking, payout, NBFC, and eKYC verification APIs with idempotent transaction handling and webhook callbacks</li>
+          <li>Developed scalable web applications &amp; PWAs using ASP.NET, C#.NET &amp; SQL Server</li>
         </ul>
       </div>
 
@@ -582,28 +615,52 @@
   <div class="wrap">
     <div class="eyebrow">Selected Work</div>
     <h2 class="section-title">Projects</h2>
-    <p class="section-sub">From an NDC airline platform to ERPs and e-commerce — nine systems, each shipped to production.</p>
+    <p class="section-sub">Flagship platforms across Fintech payments and NDC airline distribution, alongside enterprise ERPs and web systems.</p>
 
-    <div class="featured reveal">
-      <div class="featured-head">
-        <h3>NDC Airline Distribution System</h3>
-        <span class="team-tag">TEAM OF 4 · ASP.NET CORE, MVC, C#</span>
+    <div class="featured-stack">
+      <div class="featured reveal" data-badge="FEATURED · TRAVEL TECH">
+        <div class="featured-head">
+          <h3>NDC Airline Distribution System</h3>
+          <span class="team-tag">TEAM OF 4 · ASP.NET CORE, MVC, C#</span>
+        </div>
+        <p class="desc">A client-based NDC platform integrating multiple airline and GDS APIs to IATA NDC standards — fetching real-time flight availability, fares, and booking data from different providers.</p>
+        <div class="stub-row">
+          <span class="stub amber">✈ AMADEUS</span>
+          <span class="stub amber">✈ SABRE</span>
+          <span class="stub amber">✈ AMERICAN AIRLINES</span>
+          <span class="stub amber">✈ NDC XML</span>
+        </div>
+        <ul class="t-bullets">
+          <li>Integrated Amadeus, Sabre, American Airlines &amp; other NDC airline APIs</li>
+          <li>Implemented flight search, availability, pricing &amp; booking APIs</li>
+          <li>Handled request/response mapping to NDC XML standards</li>
+          <li>Built error handling, fallback logic &amp; API response validation</li>
+          <li>Worked on multi-airline search result aggregation</li>
+          <li>Coordinated directly with the client team on API specs &amp; issues</li>
+        </ul>
       </div>
-      <p class="desc">A client-based NDC platform integrating multiple airline and GDS APIs to IATA NDC standards — fetching real-time flight availability, fares, and booking data from different providers.</p>
-      <div class="stub-row">
-        <span class="stub">✈ AMADEUS</span>
-        <span class="stub">✈ SABRE</span>
-        <span class="stub">✈ AMERICAN AIRLINES</span>
-        <span class="stub">✈ NDC XML</span>
+
+      <div class="featured fintech-featured reveal" data-badge="FEATURED · FINTECH &amp; PAYMENTS">
+        <div class="featured-head">
+          <h3>Fintech Recharge &amp; Money Transfer Suite</h3>
+          <span class="team-tag">TEAM OF 5 · ASP.NET, C#.NET, SQL SERVER, PWA</span>
+        </div>
+        <p class="desc">An end-to-end B2B/B2C fintech payment platform powering instant Mobile &amp; DTH recharges, Domestic Money Transfer (DMT), AEPS banking, and BBPS utility bill payments across multi-tier agent networks.</p>
+        <div class="stub-row">
+          <span class="stub">₹ DMT (IMPS / NEFT)</span>
+          <span class="stub">₹ RECHARGE &amp; DTH</span>
+          <span class="stub">₹ AEPS &amp; MICRO ATM</span>
+          <span class="stub">₹ BBPS &amp; EKYC</span>
+        </div>
+        <ul class="t-bullets">
+          <li>Built instant Domestic Money Transfer (DMT) with remitter OTP, beneficiary verification &amp; UTR tracking</li>
+          <li>Developed multi-operator Mobile &amp; DTH recharge routing with API fallback and auto-refund on failure</li>
+          <li>Integrated AEPS cash withdrawal/balance enquiry and BBPS utility bill payment modules</li>
+          <li>Designed real-time double-entry wallet ledgers, slab-wise commissions &amp; distributor hierarchies</li>
+          <li>Implemented timeout recovery, status-check polling &amp; webhook reconciliation for zero-leakage settlements</li>
+          <li>Delivered retailer &amp; distributor portals as responsive web apps and installable PWAs</li>
+        </ul>
       </div>
-      <ul class="t-bullets">
-        <li>Integrated Amadeus, Sabre, American Airlines &amp; other NDC airline APIs</li>
-        <li>Implemented flight search, availability, pricing &amp; booking APIs</li>
-        <li>Handled request/response mapping to NDC XML standards</li>
-        <li>Built error handling, fallback logic &amp; API response validation</li>
-        <li>Worked on multi-airline search result aggregation</li>
-        <li>Coordinated directly with the client team on API specs &amp; issues</li>
-      </ul>
     </div>
 
     <div class="project-grid">
@@ -613,19 +670,14 @@
         <div class="project-meta"><span>ASP.NET · jQuery · SQL · PWA</span><span>TEAM 4 (LEAD)</span></div>
       </div>
       <div class="project-card">
-        <h4>Real Estate Platform</h4>
-        <p>Property search and listing platform with loan-request management, admin oversight, and agent commission tracking.</p>
-        <div class="project-meta"><span>ASP.NET · MAUI · PWA</span><span>TEAM 4</span></div>
-      </div>
-      <div class="project-card">
-        <h4>Loan Software</h4>
-        <p>Lead-management system connecting retailers and distributors, with automated tracking and admin approval workflows.</p>
+        <h4>Loan &amp; NBFC Lead Software</h4>
+        <p>Fintech lead-management and onboarding system connecting retailers and distributors, with automated tracking, KYC checks, and admin approval workflows.</p>
         <div class="project-meta"><span>ASP.NET · SQL Server</span><span>TEAM 2</span></div>
       </div>
       <div class="project-card">
-        <h4>Color Prediction App</h4>
-        <p>Mobile recharge management application with an integrated prediction game and shopping module.</p>
-        <div class="project-meta"><span>ASP.NET · jQuery · SQL</span><span>TEAM 2</span></div>
+        <h4>Real Estate Platform</h4>
+        <p>Property search and listing platform with loan-request management, admin oversight, and agent commission tracking.</p>
+        <div class="project-meta"><span>ASP.NET · MAUI · PWA</span><span>TEAM 4</span></div>
       </div>
       <div class="project-card">
         <h4>School ERP Software</h4>
@@ -638,14 +690,14 @@
         <div class="project-meta"><span>PWA · jQuery · SQL</span><span>TEAM 4</span></div>
       </div>
       <div class="project-card">
+        <h4>Color Prediction &amp; Recharge App</h4>
+        <p>Mobile recharge management application with an integrated wallet, prediction module, and e-commerce storefront.</p>
+        <div class="project-meta"><span>ASP.NET · jQuery · SQL</span><span>TEAM 2</span></div>
+      </div>
+      <div class="project-card">
         <h4>Website Design &amp; Development</h4>
         <p>Designed and delivered 50+ client websites — banners, registrations, enquiries &amp; calendars, built to spec.</p>
         <div class="project-meta"><span>ASP.NET · JS · SQL</span><span>TEAM 2</span></div>
-      </div>
-      <div class="project-card">
-        <h4>Recharge Solutions</h4>
-        <p>Mobile &amp; DTH recharge platform with money transfer, AEPS, DMT &amp; e-commerce, built on third-party API integrations.</p>
-        <div class="project-meta"><span>ASP.NET · SQL · PWA</span><span>TEAM 5</span></div>
       </div>
     </div>
   </div>
@@ -669,7 +721,7 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="contact-grid">
-      <h2>Building an NDC integration, or just need a senior .NET hand? Let's talk.</h2>
+      <h2>Building a Fintech payment platform, NDC airline integration, or enterprise .NET system? Let's talk.</h2>
       <div class="contact-links">
         <a class="contact-link" href="mailto:tanwar.pk94@gmail.com">tanwar.pk94@gmail.com</a>
         <a class="contact-link" href="tel:+919729047704">+91 97290 47704</a>
@@ -678,7 +730,7 @@
     </div>
     <footer>
       <span>© 2026 Pradeep Kumar</span>
-      <span>Senior Software Engineer · Full-Stack .NET</span>
+      <span>Senior Software Engineer · Full-Stack .NET · Travel &amp; Fintech</span>
     </footer>
   </div>
 </section>
